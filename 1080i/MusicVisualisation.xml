@@ -9,9 +9,36 @@
             <include>Animation_FadeIn</include>
             <include>Animation_FadeOut</include>
         </control>
-        
+
+	<control type="multiimage" id="7975">
+            <left>-2160</left>
+            <width>1</width>
+            <height>1</height>
+            <timeperimage>7000</timeperimage>
+            <randomize>true</randomize>
+            <fadetime>600</fadetime>
+            <imagepath background="true">$VAR[Image_ArtistFanartVis]</imagepath>
+            <visible>System.HasAddon(script.colorbox)</visible>
+        </control>
+
         <control type="multiimage">
             <aspectratio>scale</aspectratio>
+            <include>Dimensions_Fullscreen</include>
+            <timeperimage>10000</timeperimage>
+            <randomize>true</randomize>
+            <fadetime>600</fadetime>
+            <loop>true</loop>
+            <imagepath background="true">$INFO[Window(home).Property(ImageFilterFIVE)]</imagepath>
+	    <colordiffuse>B0FFFFFF</colordiffuse>
+            <animation effect="fade" start="100" end="65" time="0" condition="Skin.HasSetting(OSDVisualisation.ShowFanart)">Conditional</animation>
+            <animation effect="zoom" start="110" end="130" center="auto" time="10000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(ArtistSlideshow.Animate)">Conditional</animation>
+            <animation effect="slide" start="-30,-30" end="30,30" time="6000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(ArtistSlideshow.Animate)">Conditional</animation>
+            <include>Animation_FadeIn</include>
+            <include>Animation_FadeOut</include>
+        </control>
+        
+        <control type="multiimage">
+            <aspectratio>keep</aspectratio>
             <include>Dimensions_Fullscreen</include>
             <timeperimage>10000</timeperimage>
             <randomize>true</randomize>
