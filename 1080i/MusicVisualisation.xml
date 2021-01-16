@@ -23,23 +23,29 @@
 
         <control type="multiimage">
             <aspectratio>scale</aspectratio>
-            <include>Dimensions_Fullscreen</include>
+            <width>1920</width>
+            <height>1920</height>
+	    <top>-420</top>
             <timeperimage>10000</timeperimage>
             <randomize>true</randomize>
             <fadetime>600</fadetime>
             <loop>true</loop>
             <imagepath background="true">$INFO[Window(home).Property(ImageFilterFIVE)]</imagepath>
-	    <colordiffuse>B0FFFFFF</colordiffuse>
+	    <colordiffuse>90FFFFFF</colordiffuse>
             <animation effect="fade" start="100" end="65" time="0" condition="Skin.HasSetting(OSDVisualisation.ShowFanart)">Conditional</animation>
             <animation effect="zoom" start="110" end="130" center="auto" time="10000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(ArtistSlideshow.Animate)">Conditional</animation>
             <animation effect="slide" start="-30,-30" end="30,30" time="6000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(ArtistSlideshow.Animate)">Conditional</animation>
             <include>Animation_FadeIn</include>
             <include>Animation_FadeOut</include>
+            <animation effect="slide" start="0,-420" end="0,420" time="60000" tween="sine" easing="inout" pulse="true" condition="true">Conditional</animation>
         </control>
         
         <control type="multiimage">
             <aspectratio>keep</aspectratio>
-            <include>Dimensions_Fullscreen</include>
+            <top>70</top>
+            <left>70</left>
+            <width>940</width>
+            <height>940</height>
             <timeperimage>10000</timeperimage>
             <randomize>true</randomize>
             <fadetime>600</fadetime>
@@ -72,6 +78,48 @@
             <include>Animation_FadeOut</include>
             <visible>Skin.HasSetting(NormalLyrics)</visible>
             <visible>Window.IsVisible(script-cu-lrclyrics-main.xml)</visible>
+        </control>
+
+        <control type="group" id="3399">
+	    <left>1080</left>
+	    <width>840</width>
+            <animation effect="fade" time="600" delay="600">Visible</animation>
+            <animation effect="fade" time="600">Hidden</animation>
+            <include>Animation_FadeIn</include>
+            <include>Animation_FadeOut</include>
+            <control type="label">
+                <description>Now Playing</description>
+                <top>-200</top>
+		<wrapmultiline>true</wrapmultiline>
+                <label>$INFO[MusicPlayer.Title]</label>
+                <font>font_nowplaying_big</font>
+                <textcolor>ffffffff</textcolor>
+                <align>left</align>
+            </control>
+            <control type="label">
+                <description>Now Playing</description>
+                <top>50</top>
+                <label>$INFO[MusicPlayer.Artist]</label>
+                <font>font_nowplaying_small</font>
+                <textcolor>ffffffff</textcolor>
+                <align>left</align>
+            </control>
+            <control type="label">
+                <description>Now Playing</description>
+                <top>200</top>
+                <label>$INFO[MusicPlayer.Album]</label>
+                <font>font_nowplaying_small</font>
+                <textcolor>ffffffff</textcolor>
+                <align>left</align>
+            </control>
+            <control type="label">
+                <description>Now Playing</description>
+                <top>350</top>
+                <label>$INFO[MusicPlayer.Year]</label>
+                <font>font_nowplaying_small</font>
+                <textcolor>ffffffff</textcolor>
+                <align>left</align>
+            </control>
         </control>
 
         <control type="group" id="3334">

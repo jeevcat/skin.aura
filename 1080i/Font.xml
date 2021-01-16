@@ -130,6 +130,17 @@
             <size>70</size>
         </font>
 
+        <font>
+            <name>font_nowplaying_big</name>
+            <filename>SourceSansPro-Bold.ttf</filename>
+            <size>50</size>
+        </font>
+        <font>
+            <name>font_nowplaying_small</name>
+            <filename>SourceSansPro-ExtraLight.ttf</filename>
+            <size>40</size>
+        </font>
+
         <!-- Big weather temp -->        
         <font>
             <name>font_weather_currenttemp</name>
